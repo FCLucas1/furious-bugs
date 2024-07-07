@@ -1,0 +1,5012 @@
+return {
+	['testburger'] = {
+		label = 'Test Burger',
+		weight = 220,
+		degrade = 60,
+		client = {
+			image = 'burger_chicken.png',
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = 2500,
+			export = 'ox_inventory_examples.testburger'
+		},
+		server = {
+			export = 'ox_inventory_examples.testburger',
+			test = 'what an amazingly delicious burger, amirite?'
+		},
+		buttons = {
+			{
+				label = 'Lick it',
+				action = function(slot)
+					print('You licked the burger')
+				end
+			},
+			{
+				label = 'Squeeze it',
+				action = function(slot)
+					print('You squeezed the burger :(')
+				end
+			},
+			{
+				label = 'What do you call a vegan burger?',
+				group = 'Hamburger Puns',
+				action = function(slot)
+					print('A misteak.')
+				end
+			},
+			{
+				label = 'What do frogs like to eat with their hamburgers?',
+				group = 'Hamburger Puns',
+				action = function(slot)
+					print('French flies.')
+				end
+			},
+			{
+				label = 'Why were the burger and fries running?',
+				group = 'Hamburger Puns',
+				action = function(slot)
+					print('Because they\'re fast food.')
+				end
+			}
+		},
+		consume = 0.3
+	},
+	['bandage'] = {
+		label = 'Bandage',
+		weight = 60,
+		client = {
+			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
+			prop = { model = `prop_rolled_sock_02`, pos = vec3(-0.14, -0.14, -0.08), rot = vec3(-50.0, -50.0, 0.0) },
+			disable = { move = true, car = true, combat = true },
+			usetime = 2500,
+		}
+	},
+
+	['black_money'] = {
+		label = 'Schwarzgeld',
+	},
+
+	["apfel"] = {
+		label = "Apfel",
+		weight = 100,
+		client = {
+			status = { hunger = 7500 },
+			anim = 'eating',
+			prop = 'ng_proc_food_aple1a',
+			usetime = 2500,
+			notification = 'Nichts geht über einen frisch gepflückten Apfel'
+		},
+	},
+
+
+	['apfelsaft'] = {
+		label = 'Apfelsaft',
+		weight = 500,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_juice_bloodorange`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Selbst gemacht schmeckt am besten'
+		}
+	},
+
+	--Food
+	["sushi"] = {
+		label = "Sushi",
+		weight = 95,
+		client = {
+			status = { hunger = 250000 },
+			anim = 'eating',
+			prop = 'brum_single_philly',
+			usetime = 2500,
+			notification = 'Sushi schmeckt am besten gerollt'
+		},
+	},
+	["lachsrolle"] = {
+		label = "Lachsrolle",
+		weight = 115,
+		client = {
+			status = { hunger = 250000 },
+			anim = 'eating',
+			prop = 'brum_single_salmon',
+			usetime = 2500,
+			notification = 'Lachsrolle schmeckt am besten gerollt'
+		},
+	},
+	["kraeuterlachsrolle"] = {
+		label = "Kräuterlachsrolle",
+		weight = 115,
+		client = {
+			status = { hunger = 250000 },
+			anim = 'eating',
+			prop = 'brum_single_rainbowroll',
+			usetime = 2500,
+			notification = 'Kräuterlachsrolle schmeckt am besten gerollt'
+		},
+	},
+	["shrimpsuppe"] = {
+		label = "Shrimpsuppe",
+		weight = 160,
+		client = {
+			status = { hunger = 250000 },
+			anim = 'eating',
+			prop = 'brum_ramen_spicyshrmp',
+			usetime = 2500,
+			notification = 'Shrimpsuppe gibt dir den Kick'
+		},
+	},
+	["burger"] = {
+		label = "Hamburger",
+		weight = 150,
+		client = {
+			status = { hunger = 250000 },
+			anim = 'eating',
+			prop = 'prop_cs_burger_01',
+			usetime = 2500,
+			notification = 'Yummy'
+		},
+	},
+	["fishburger"] = {
+		label = "Fischburger",
+		weight = 150,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'prop_cs_burger_01',
+			usetime = 2500,
+			notification = 'Direkt aus dem Ilsebach'
+		},
+	},
+	["casino_burger"] = {
+		label = "Casino Burger",
+		weight = 150,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'prop_cs_burger_01',
+			usetime = 2500,
+			notification = 'Schmeckt voll abgeranzt'
+		},
+	},
+	["chips"] = {
+		label = "Chips",
+		weight = 110,
+		client = {
+			status = { hunger = 111000 },
+			anim = 'eating',
+			prop = 'v_ret_ml_chips3',
+			usetime = 2500,
+			notification = 'Nur die halbe packung war voll'
+		},
+	},
+	["chaser"] = {
+		label = "Tafel Schokolade",
+		weight = 60,
+		client = {
+			status = { hunger = 111000 },
+			anim = 'eating',
+			prop = 'prop_choc_ego',
+			usetime = 2500,
+			notification = 'Karies vorprogrammiert'
+		},
+	},
+	["hotdog"] = {
+		label = "Hot Dog",
+		weight = 100,
+		client = {
+			status = { hunger = 325000 },
+			anim = 'eating',
+			prop = 'prop_cs_hotdog_01',
+			usetime = 2500,
+			notification = 'Bock auf einen heißen Hund?'
+		},
+	},
+	["taco"] = {
+		label = "Taco",
+		weight = 75,
+		client = {
+			status = { hunger = 165000 },
+			anim = 'eating',
+			prop = 'prop_taco_01',
+			usetime = 2500,
+			notification = 'Taco? Mexikanisch!'
+		},
+	},
+	["pizza"] = {
+		label = "Pizza",
+		weight = 320,
+		client = {
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'brum_fourcheese',
+			usetime = 2500,
+			notification = 'Pizza mag jeder'
+		},
+	},
+	["pommes"] = {
+		label = "Pommes",
+		weight = 120,
+		client = {
+			status = { hunger = 150000 },
+			anim = 'eating',
+			prop = 'prop_food_chips',
+			usetime = 2500,
+			notification = 'Pommes gehen immer'
+		},
+	},
+	["chocolate_mousse"] = {
+		label = "Schoko Mousse Törtchen",
+		weight = 60,
+		client = {
+			status = { hunger = 125000 },
+			anim = 'eating',
+			prop = 'brum_cupcake_chocolate',
+			usetime = 2500,
+			notification = 'hmmm Schoki'
+		},
+	},
+	["tuna_pizza"] = {
+		label = "Thunfischpizza",
+		weight = 350,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'brum_peperonisausagebeef',
+			usetime = 2500,
+			notification = 'Pizza direkt aus dem Meer geangelt'
+		},
+	},
+	["fishsticks"] = {
+		label = "Fischstäbchen",
+		weight = 110,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'prop_food_cb_nugets',
+			usetime = 2500,
+			notification = 'Fisch als Stäbchen'
+		},
+	},
+	["chicken_tender"] = {
+		label = "Chicken Tender",
+		weight = 110,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'prop_food_cb_nugets',
+			usetime = 2500,
+			notification = 'Mit grünem akzenten'
+		},
+	},
+	["buttermilk_chicken"] = {
+		label = "Buttermilch Chicken",
+		weight = 130,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'prop_food_cb_nugets',
+			usetime = 2500,
+			notification = 'Butter mit milch'
+		},
+	},
+	["honey_chicken"] = {
+		label = "Honey Mustard Chicken",
+		weight = 160,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'prop_food_cb_nugets',
+			usetime = 2500,
+			notification = 'Chiiickeen'
+		},
+	},
+	["tomahawk_steak"] = {
+		label = "Tomahawk Steak",
+		weight = 320,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'brum_tomahawk_cooked',
+			usetime = 2500,
+			notification = 'Saftiges Steak'
+		},
+	},
+	["tomatensuppe"] = {
+		label = "Tomatensuppe",
+		weight = 115,
+		client = {
+			status = { hunger = 300000 },
+			anim = 'eating',
+			prop = 'brum_soup_tomato',
+			usetime = 2500,
+			notification = 'Passierte Tomaten noch kleiner gemacht'
+		},
+	},
+	["pizza_diavolo"] = {
+		label = "Pizza Diavolo",
+		weight = 400,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'brum_peperonisausagebeef',
+			usetime = 2500,
+			notification = 'Pizza de Diavolo'
+		},
+	},
+	["pizza_salami"] = {
+		label = "Pizza Salami",
+		weight = 400,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'brum_sicilliansausagechilligarlicbasil',
+			usetime = 2500,
+			notification = 'Eine der beliebtesten Pizzen der Welt'
+		},
+	},
+	["burger_2"] = {
+		label = "Edler Burger",
+		weight = 180,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'prop_cs_burger_01',
+			usetime = 2500,
+			notification = 'Burger der Extraklasse'
+		},
+	},
+	["sandwitches"] = {
+		label = "Sandwich",
+		weight = 130,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'prop_sandwich_01',
+			usetime = 2500,
+			notification = 'Für den Hunger zwischendurch'
+		},
+	},
+	["eis_nuss"] = {
+		label = "Bignut",
+		weight = 70,
+		client = {
+			status = { hunger = 75000 },
+			anim = 'eating',
+			prop = 'brum_caramel',
+			usetime = 2500,
+			notification = 'Schlecht bei einer Nussallergie'
+		},
+	},
+	["eis_erdbeer"] = {
+		label = "Red Lady",
+		weight = 70,
+		client = {
+			status = { hunger = 75000 },
+			anim = 'eating',
+			prop = 'brum_berry',
+			usetime = 2500,
+			notification = 'Ice Ice Baby'
+		},
+	},
+	["eis_vanille"] = {
+		label = "Vanilla Joe",
+		weight = 70,
+		client = {
+			status = { hunger = 75000 },
+			anim = 'eating',
+			prop = 'brum_vanilla',
+			usetime = 2500,
+			notification = 'Standard halt'
+		},
+	},
+	["eis_schlumpf"] = {
+		label = "Papa Schlumpf",
+		weight = 70,
+		client = {
+			status = { hunger = 75000 },
+			anim = 'eating',
+			prop = 'brum_bubblegum',
+			usetime = 2500,
+			notification = 'Papa Schlumpf steht auf Schlumpfine'
+		},
+	},
+	["eis_schoko"] = {
+		label = "Brauner Bär",
+		weight = 70,
+		client = {
+			status = { hunger = 75000 },
+			anim = 'eating',
+			prop = 'brum_choc',
+			usetime = 2500,
+			notification = 'Schoki Eis'
+		},
+	},
+	["eis_candy"] = {
+		label = "Candy Pop",
+		weight = 70,
+		client = {
+			status = { hunger = 75000 },
+			anim = 'eating',
+			prop = 'brum_bubblegum',
+			usetime = 2500,
+			notification = 'Verdammt süß'
+		},
+	},
+	["donut"] = {
+		label = "Donut",
+		weight = 90,
+		client = {
+			status = { hunger = 75000 },
+			anim = 'eating',
+			prop = 'prop_donut_01',
+			usetime = 2500,
+			notification = 'Ring mit Loch'
+		},
+	},
+	["bohnen_menue"] = {
+		label = "Bohnenmenü",
+		weight = 130,
+		client = {
+			status = { hunger = 75000 },
+			anim = 'eating',
+			prop = 'brum_ramen_vegtable',
+			usetime = 2500,
+			notification = 'Menü mit Bohnen halt'
+		},
+	},
+	["salat"] = {
+		label = "Salat",
+		weight = 100,
+		client = {
+			status = { hunger = 75000 },
+			anim = 'eating',
+			prop = 'brum_ramen_vegtable',
+			usetime = 2500,
+			notification = 'Von Salat schrumpft der Bizeps'
+		},
+	},
+	["sparerips"] = {
+		label = "Sparerips",
+		weight = 180,
+		client = {
+			status = { hunger = 400000 },
+			anim = 'eating',
+			prop = 'brum_ribs_rack',
+			usetime = 2500,
+			notification = 'Saftig Knaftig'
+		},
+	},
+	["pancakes"] = {
+		label = "Pancakes",
+		weight = 220,
+		client = {
+			status = { hunger = 250000 },
+			anim = 'eating',
+			prop = 'brum_brownie_lemon',
+			usetime = 2500,
+			notification = 'Frühstück ist die wichtigste Mahlzeit'
+		},
+	},
+	["waffeln"] = {
+		label = "Waffeln",
+		weight = 190,
+		client = {
+			status = { hunger = 250000 },
+			anim = 'eating',
+			prop = 'brum_brownie_lemon',
+			usetime = 2500,
+			notification = 'Waffeln? Waffeln!'
+		},
+	},
+	["bubbelwaffel"] = {
+		label = "Bubbelwaffel",
+		weight = 190,
+		client = {
+			status = { hunger = 125000 },
+			anim = 'eating',
+			prop = 'brum_brownie_lemon',
+			usetime = 2500,
+			notification = 'Waffeln? Waffeln!'
+		},
+	},
+	["apfelkuchen"] = {
+		label = "Apfelkuchen",
+		weight = 160,
+		client = {
+			status = { hunger = 250000 },
+			anim = 'eating',
+			prop = 'brum_cakeslice_vanilla',
+			usetime = 2500,
+			notification = 'Apfel mit Kuchen'
+		},
+	},
+	["crepe_schoko"] = {
+		label = "Schoko Crepe",
+		weight = 120,
+		client = {
+			status = { hunger = 170000 },
+			anim = 'eating',
+			prop = 'brum_brownie_whitechoc',
+			usetime = 2500,
+			notification = 'Crepes die machen glücklich'
+		},
+	},
+	["lasagne"] = {
+		label = "Lasagne",
+		weight = 150,
+		client = {
+			status = { hunger = 333333 },
+			anim = 'eating',
+			prop = 'brum_brownie_whitechoc',
+			usetime = 2500,
+			notification = 'Aus Pferde gemacht'
+		},
+	},
+	["tiramisu"] = {
+		label = "Tiramisu",
+		weight = 150,
+		client = {
+			status = { hunger = 190000 },
+			anim = 'eating',
+			prop = 'brum_brownie_whitechoc',
+			usetime = 2500,
+			notification = 'Du hast 1x Tiramisu geesst'
+		},
+	},
+	["spaghetti_bolognese"] = {
+		label = "Spaghetti Bolognese",
+		weight = 150,
+		client = {
+			status = { hunger = 333333 },
+			anim = 'eating',
+			prop = 'brum_ramen_chicken',
+			usetime = 2500,
+			notification = 'Du hast 1x Spaghetti Bolognose gegessen'
+		},
+	},
+	["spaghetti_carbonara"] = {
+		label = "Spaghetti Carbonara",
+		weight = 180,
+		client = {
+			status = { hunger = 333333 },
+			anim = 'eating',
+			prop = 'brum_ramen_chicken',
+			usetime = 2500,
+			notification = 'Du hast 1x Spaghetti Carbonara gegessen'
+		},
+	},
+	["cheeseburger"] = {
+		label = "Cheeseburger",
+		weight = 180,
+		client = {
+			status = { hunger = 355333 },
+			anim = 'eating',
+			prop = 'prop_cs_burger_01',
+			usetime = 2500,
+			notification = 'Du hast 1x Cheeseburger gegessen'
+		},
+	},
+	["chicken_burger"] = {
+		label = "Chicken Burger",
+		weight = 180,
+		client = {
+			status = { hunger = 295333 },
+			anim = 'eating',
+			prop = 'prop_cs_burger_01',
+			usetime = 2500,
+			notification = 'Du hast 1x Chicken Burger gegessen'
+		},
+	},
+	["veggie_burger"] = {
+		label = "Veggie Burger",
+		weight = 180,
+		client = {
+			status = { hunger = 315333 },
+			anim = 'eating',
+			prop = 'prop_cs_burger_01',
+			usetime = 2500,
+			notification = 'Du hast 1x Veggie Burger gegessen'
+		},
+	},
+	["nuggets"] = {
+		label = "Chicken Nuggets",
+		weight = 110,
+		client = {
+			status = { hunger = 275333 },
+			anim = 'eating',
+			prop = 'brum_patties_bbq',
+			usetime = 2500,
+			notification = 'Du hast 1x Chicken Nuggets gegessen'
+		},
+	},
+	["2kg_burger"] = {
+		label = "2KG Burger",
+		weight = 300,
+		client = {
+			status = { hunger = 415333 },
+			anim = 'eating',
+			prop = 'brum_burger_double',
+			usetime = 2500,
+			notification = 'Du hast 1x 2KG Burger gegessen'
+		},
+	},
+	["curly_fries"] = {
+		label = "Curly Fries",
+		weight = 120,
+		client = {
+			status = { hunger = 265333 },
+			anim = 'eating',
+			prop = 'prop_food_chips',
+			usetime = 2500,
+			notification = 'Du hast 1x Curly Fries gegessen'
+		},
+	},
+	["caesar_salad"] = {
+		label = "Caesar Salad",
+		weight = 100,
+		client = {
+			status = { hunger = 285333 },
+			anim = 'eating',
+			prop = 'brum_soup_vegtable',
+			usetime = 2500,
+			notification = 'Du hast 1x Caesar Salad gegessen'
+		},
+	},
+	["lahmacun"] = {
+		label = "Lahmacun",
+		weight = 100,
+		client = {
+			status = { hunger = 355333 },
+			anim = 'eating',
+			prop = 'brum_mixedchicken_kebab',
+			usetime = 2500,
+			notification = 'Du hast 1x Lahmacun gegessen'
+		},
+	},
+	["doener"] = {
+		label = "Döner",
+		weight = 200,
+		client = {
+			status = { hunger = 405333 },
+			anim = 'eating',
+			prop = 'brum_mixedchicken_kebab',
+			usetime = 2500,
+			notification = 'Du hast 1x Döner gegessen'
+		},
+	},
+	["adana"] = {
+		label = "Adana Kebab",
+		weight = 200,
+		client = {
+			status = { hunger = 405333 },
+			anim = 'eating',
+			prop = 'brum_mixedchicken_kebab',
+			usetime = 2500,
+			notification = 'Du hast 1x Adana Kebab gegessen'
+		},
+	},
+	["pomm_doener"] = {
+		label = "Pomm Döner",
+		weight = 200,
+		client = {
+			status = { hunger = 375333 },
+			anim = 'eating',
+			prop = 'brum_mixedchicken_kebab',
+			usetime = 2500,
+			notification = 'Du hast 1x Pomm Döner gegessen'
+		},
+	},
+	["baklava"] = {
+		label = "Baklava",
+		weight = 200,
+		client = {
+			status = { hunger = 275333 },
+			anim = 'eating',
+			prop = 'brum_single_philly',
+			usetime = 2500,
+			notification = 'Du hast 1x Baklava gegessen'
+		},
+	},
+	["doenerfleisch"] = {
+		label = "Dönerfleisch",
+		weight = 200,
+		client = {
+			status = { hunger = 215333 },
+			anim = 'eating',
+			prop = 'brum_mixedchicken_kebab',
+			usetime = 2500,
+			notification = 'Du hast 1x Dönerfleisch gegessen'
+		},
+	},
+	["fladenbrot"] = {
+		label = "Fladenbrot",
+		weight = 200,
+		client = {
+			status = { hunger = 185333 },
+			anim = 'eating',
+			prop = 'brum_veg_kebab',
+			usetime = 2500,
+			notification = 'Du hast 1x Fladenbrot gegessen'
+		},
+	},
+	["lahmacun_brot"] = {
+		label = "Lahmacun Brot",
+		weight = 200,
+		client = {
+			status = { hunger = 185333 },
+			anim = 'eating',
+			prop = 'brum_veg_kebab',
+			usetime = 2500,
+			notification = 'Du hast 1x Lahmacun Brot gegessen'
+		},
+	},
+	["kartoffelgratin"] = {
+		label = "Kartoffelgratin",
+		weight = 200,
+		client = {
+			status = { hunger = 285333 },
+			anim = 'eating',
+			prop = 'brum_ramen_vegtable',
+			usetime = 2500,
+			notification = 'Du hast 1x Kartoffelgratin gegessen'
+		},
+	},
+	["lachsnudeln"] = {
+		label = "Nudeln mit Lachs",
+		weight = 180,
+		client = {
+			status = { hunger = 255333 },
+			anim = 'eating',
+			prop = 'brum_ramen_vegtable',
+			usetime = 2500,
+			notification = 'Du hast 1x Nudeln mit Lachs gegessen'
+		},
+	},
+	["gurkensalat"] = {
+		label = "Gurkensalat",
+		weight = 170,
+		client = {
+			status = { hunger = 245333 },
+			anim = 'eating',
+			prop = 'brum_ramen_vegtable',
+			usetime = 2500,
+			notification = 'Du hast 1x Gurkensalat gegessen'
+		},
+	},
+	["bohnensteak"] = {
+		label = "Steak mit Bohnen",
+		weight = 500,
+		client = {
+			status = { hunger = 295333 },
+			anim = 'eating',
+			prop = 'brum_tbone_raw_tray',
+			usetime = 2500,
+			notification = 'Du hast 1x Steak mit Bohnen gegessen'
+		},
+	},
+	["gurke"] = {
+		label = "Gurke",
+		weight = 30,
+		client = {
+			status = { hunger = 11 },
+			anim = 'eating',
+			prop = 'brum_tbone_raw_tray',
+			usetime = 2500,
+			notification = 'Du hast 1x Gurke gegessen'
+		},
+	},
+	["steak"] = {
+		label = "Steak",
+		weight = 190,
+		client = {
+			status = { hunger = 255333 },
+			anim = 'eating',
+			prop = 'brum_bbq_lit',
+			usetime = 2500,
+			notification = 'Du hast 1x Steak gegessen'
+		},
+	},
+	["hundekeks"] = {
+		label = "Hundekeks",
+		weight = 190,
+		client = {
+			status = { hunger = 155333 },
+			anim = 'eating',
+			prop = 'prop_food_cb_nugets',
+			usetime = 2500,
+			notification = 'Du hast 1x Hundekeks gegessen'
+		},
+	},
+	["bohnen"] = {
+		label = "Bohnen",
+		weight = 20,
+		client = {
+			status = { hunger = 100 },
+			anim = 'eating',
+			prop = 'brum_bbq_lit',
+			usetime = 2500,
+			notification = 'Du hast 1x Bohne gegessen'
+		},
+	},
+	["barmbrack"] = {
+		label = "Barmbrack",
+		weight = 20,
+		client = {
+			status = { hunger = 235333 },
+			anim = 'eating',
+			prop = 'brum_cupcake_caramel',
+			usetime = 2500,
+			notification = 'Du hast 1x Barmbrack gegessen'
+		},
+	},
+	["ulster_fry"] = {
+		label = "Ulster Fry",
+		weight = 20,
+		client = {
+			status = { hunger = 265333 },
+			anim = 'eating',
+			prop = 'brum_ramen_spicyshrmp',
+			usetime = 2500,
+			notification = 'Du hast 1x Ulster Fry gegessen'
+		},
+	},
+	["boxty"] = {
+		label = "Boxty",
+		weight = 20,
+		client = {
+			status = { hunger = 285333 },
+			anim = 'eating',
+			prop = 'brum_single_philly',
+			usetime = 2500,
+			notification = 'Du hast 1x Boxty gegessen'
+		},
+	},
+	["pk_burger"] = {
+		label = "Irish Burger",
+		weight = 20,
+		client = {
+			status = { hunger = 235333 },
+			anim = 'eating',
+			prop = 'prop_cs_burger_01',
+			usetime = 2500,
+			notification = 'Du hast 1x Irish Burger gegessen'
+		},
+	},
+	["thunfischsalat"] = {
+		label = "Thunfischsalat",
+		weight = 220,
+		client = {
+			status = { hunger = 215333 },
+			anim = 'eating',
+			prop = 'brum_soup_vegtable',
+			usetime = 2500,
+			notification = 'Du hast 1x Thunfischsalat gegessen'
+		},
+	},
+
+
+--------------DRINKS
+
+
+	['piswasser'] = {
+		label = 'Piswasser',
+		weight = 330,
+		close = true,
+		consume = 0,
+		client = {},
+		server = {
+			export = 'rcore_drunk.piswasser',
+		},
+	},
+	['rot_wein'] = {
+		label = 'Rot Wein',
+		weight = 330,
+		close = true,
+		consume = 0,
+		client = {},
+		server = {
+			export = 'rcore_drunk.rot_wein',
+		},
+	},
+	['weiss_wein'] = {
+		label = 'Weiß Wein',
+		weight = 330,
+		close = true,
+		consume = 0,
+		client = {},
+		server = {
+			export = 'rcore_drunk.weiss_wein',
+		},
+	},
+	['ir_whisky'] = {
+		label = 'Irish Whiskey',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {},
+		server = {
+			export = 'rcore_drunk.ir_whisky',
+		},
+	},
+	['pk_whisky'] = {
+		label = 'Peakys beste Whiskey',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {},
+		server = {
+			export = 'rcore_drunk.pk_whisky',
+		},
+	},
+	['guiness_dunkel'] = {
+		label = 'Guinness Dunkel',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {},
+		server = {
+			export = 'rcore_drunk.guiness_dunkel',
+		},
+	},
+	['spezial'] = {
+		label = 'Spezial',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {},
+		server = {
+			export = 'rcore_drunk.spezial',
+		},
+	},
+	['kaffee'] = {
+		label = 'Schwarzer Kaffee',
+		weight = 400,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_takeaway_medium`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Wasser mit Kaffee geschmack'
+		}
+	},
+	['shake_schoko'] = {
+		label = 'Schoko Shake',
+		weight = 200,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_smoothie_purple`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Smoothie in ungesund'
+		}
+	},
+	['shake_vanille'] = {
+		label = 'Vanille Shake',
+		weight = 200,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_smoothiepink`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Smoothie in ungesund'
+		}
+	},
+	['shake_erdbeer'] = {
+		label = 'Erdbeer Shake',
+		weight = 200,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_smoothie_red`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Smoothie in ungesund'
+		}
+	},
+	['cappocino'] = {
+		label = 'Cappucino',
+		weight = 400,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_takeaway_small`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Kaffee mit Milch'
+		}
+	},
+	['milchkaffe'] = {
+		label = 'Milchkaffe',
+		weight = 400,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_food_bs_coffee`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Milch mit Kaffee'
+		}
+	},
+	['latte'] = {
+		label = 'Latte',
+		weight = 400,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_latte`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Kaffee Latte'
+		}
+	},
+	['shake_erdbeer_2'] = {
+		label = 'Erdbeerträumchen',
+		weight = 200,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_smoothie_red`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Ein Traum von Erdbeere'
+		}
+	},
+	['shake_vanille_2'] = {
+		label = 'Vanilla Killer',
+		weight = 200,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_smoothiepink`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Killer Vanille'
+		}
+	},
+	['shake_schoko_2'] = {
+		label = 'Schokostrudel',
+		weight = 200,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_smoothie_purple`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Dieser Strudel zieht dich mit'
+		}
+	},
+	['shake_candy_2'] = {
+		label = 'Candy Brandy',
+		weight = 200,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_smoothie_green`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Ist das der beste geschmack?'
+		}
+	},
+	['bloody_mary'] = {
+		label = 'Bloody Mary',
+		weight = 400,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Kennst du die Legende der Bloody Mary?'
+		},
+		server = {
+			export = 'rcore_drunk.bloody_mary',
+		},
+	},
+	['apfelschorle'] = {
+		label = 'Apfelschorle',
+		weight = 330,
+		client = {
+			status = { thirst = 350000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_juice_pineapple`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Apfel mit Kohlensäure?'
+		}
+	},
+	['water'] = {
+		label = 'Wasser',
+		weight = 330,
+		client = {
+			status = { thirst = 350000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `ba_prop_club_water_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Wasser halt'
+		}
+	},
+	['bean_machine_coffe'] = {
+		label = 'Bean machine coffe',
+		weight = 400,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `p_ing_coffeecup_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Filterkaffee'
+		}
+	},
+	['sprunk'] = {
+		label = 'Sprunk',
+		weight = 330,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `v_res_tt_can03`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Spriiite'
+		}
+	},
+	['cola'] = {
+		label = 'Cola',
+		weight = 330,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Coke'
+		}
+	},
+	['mount_whisky'] = {
+		label = 'Mount whisky',
+		weight = 700,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Whisky on Top'
+		},
+		server = {
+			export = 'rcore_drunk.mount_whisky',
+		},
+	},
+	['redbull'] = {
+		label = 'Furious Energy Bubblegum',
+		weight = 330,
+		client = {
+			status = { thirst = 333333 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `furiousenergy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Red Bull Bubblegum'
+		}
+	},
+	['redbull_wassermelone'] = {
+		label = 'Furious Energy Acai',
+		weight = 330,
+		client = {
+			status = { thirst = 333333 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `furiousenergy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Furious Energy Acai'
+		}
+	},
+	['redbull_kaktus'] = {
+		label = 'Furious Energy Kaktusfeige',
+		weight = 330,
+		client = {
+			status = { thirst = 333333 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `furiousenergy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Furious Energy Kaktusfeige'
+		}
+	},
+	['redbull_white'] = {
+		label = 'Furious Energy Sugarfree',
+		weight = 330,
+		client = {
+			status = { thirst = 333333 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `furiousenergy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Furious Energy Sugarfree'
+		}
+	},
+	['redbull_tropical'] = {
+		label = 'Furious Energy Tropical',
+		weight = 330,
+		client = {
+			status = { thirst = 333333 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `furiousenergy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Furious Energy Tropical'
+		}
+	},
+	['redbull_blue'] = {
+		label = 'Furious Energy Blueberry',
+		weight = 330,
+		client = {
+			status = { thirst = 333333 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `furiousenergy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Furious Energy Blueberry'
+		}
+	},
+	['redbull_sugarfree'] = {
+		label = 'Furious Energy Sour Apple',
+		weight = 330,
+		client = {
+			status = { thirst = 333333 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `furiousenergy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Furious Energy Sour Apple'
+		}
+	},
+	['redbull_june'] = {
+		label = 'Furious Energy Juneberry',
+		weight = 330,
+		client = {
+			status = { thirst = 333333 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `furiousenergy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Furious Energy Juneberry'
+		}
+	},
+	['redbull_peach'] = {
+		label = 'Furious Energy Peach',
+		weight = 330,
+		client = {
+			status = { thirst = 333333 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `furiousenergy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Furious Energy Peach'
+		}
+	},
+	['furiousenergy'] = {
+		label = 'Furious Energy',
+		weight = 330,
+		client = {
+			status = { thirst = 500000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `furiousenergy`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Hauseigener Furious City Energy'
+		}
+	},
+	['pinacolada'] = {
+		label = 'Pina Colada',
+		weight = 400,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Pina Colada'
+		},
+		server = {
+			export = 'rcore_drunk.pinacolada',
+		},
+	},
+	['beer_bar'] = {
+		label = 'Irish Stout',
+		weight = 400,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Irish Stout'
+		},
+		server = {
+			export = 'rcore_drunk.beer_bar',
+		},
+	},
+	['tequila'] = {
+		label = 'Tequila Sunrise',
+		weight = 700,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Tequila'
+		},
+		server = {
+			export = 'rcore_drunk.tequila',
+		},
+	},
+	['nogo_vodka'] = {
+		label = 'Nogo vodka',
+		weight = 700,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Nogo vodka'
+		},
+		server = {
+			export = 'rcore_drunk.nogo_vodka',
+		},
+	},
+	['raki'] = {
+		label = 'Raki',
+		weight = 700,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Raki'
+		},
+		server = {
+			export = 'rcore_drunk.raki',
+		},
+	},
+	['costa_del_perro'] = {
+		label = 'Costa del perro',
+		weight = 750,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Costa del perro'
+		},
+		server = {
+			export = 'rcore_drunk.costa_del_perro',
+		},
+	},
+	['rockford_hill'] = {
+		label = 'Rockford hill',
+		weight = 750,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Rockford hill'
+		},
+		server = {
+			export = 'rcore_drunk.rockford_hill',
+		},
+	},
+	['merlot'] = {
+		label = 'Merlot',
+		weight = 750,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Merlot'
+		},
+		server = {
+			export = 'rcore_drunk.merlot',
+		},
+	},
+	['barbaresco'] = {
+		label = 'Barbaresco',
+		weight = 750,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Barbaresco'
+		},
+		server = {
+			export = 'rcore_drunk.barbaresco',
+		},
+	},
+	['vinewood_red'] = {
+		label = 'Vinewood red',
+		weight = 125,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Vinewood red'
+		},
+		server = {
+			export = 'rcore_drunk.vinewood_red',
+		},
+	},
+	['vinewood_blanc'] = {
+		label = 'Vinewood blanc',
+		weight = 750,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Vinewood blanc'
+		},
+		server = {
+			export = 'rcore_drunk.vinewood_blanc',
+		},
+	},
+	['chardonnay'] = {
+		label = 'Chardonnay',
+		weight = 750,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Chardonnay'
+		},
+		server = {
+			export = 'rcore_drunk.chardonnay',
+		},
+	},
+	['prosecco'] = {
+		label = 'Prosecco',
+		weight = 500,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Prosecco'
+		},
+		server = {
+			export = 'rcore_drunk.prosecco',
+		},
+	},
+	['champagner'] = {
+		label = 'Champagner',
+		weight = 750,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Champagner'
+		},
+		server = {
+			export = 'rcore_drunk.champagner',
+		},
+	},
+	['jackdaniels'] = {
+		label = 'Jack Daniels',
+		weight = 700,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Jack Daniels'
+		},
+		server = {
+			export = 'rcore_drunk.jackdaniels',
+		},
+	},
+	['bierpitcher'] = {
+		label = 'Bier Pitcher',
+		weight = 350,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Bier Pitcher'
+		},
+		server = {
+			export = 'rcore_drunk.bierpitcher',
+		},
+	},
+	['shot_tequila'] = {
+		label = 'Tequila Shot',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Tequila Shot'
+		},
+		server = {
+			export = 'rcore_drunk.shot_tequila',
+		},
+	},
+	['shot_mount_whisky'] = {
+		label = 'Whisky Shot',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Whisky Shot'
+		},
+		server = {
+			export = 'rcore_drunk.shot_mount_whisky',
+		},
+	},
+	['shot_nogo_vodka'] = {
+		label = 'Vodka Shot',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Vodka Shot'
+		},
+		server = {
+			export = 'rcore_drunk.shot_nogo_vodka',
+		},
+	},
+	['cocktailkirsche'] = {
+		label = 'Cocktailkirsche',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Cocktailkirsche'
+		},
+		server = {
+			export = 'rcore_drunk.cocktailkirsche',
+		},
+	},
+	['pina_colada'] = {
+		label = 'Pina Colada',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Pina Colada'
+		},
+		server = {
+			export = 'rcore_drunk.pina_colada',
+		},
+	},
+	['rum'] = {
+		label = 'Rum',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Rum'
+		},
+		server = {
+			export = 'rcore_drunk.rum',
+		},
+	},
+	['sex_on_the_Beach'] = {
+		label = 'Sex on the Beach',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Sex on the Beach'
+		},
+		server = {
+			export = 'rcore_drunk.sex_on_the_beach',
+		},
+	},
+	['wild_berry_dreams'] = {
+		label = 'Wild Berry Dreams',
+		weight = 100,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 250000 },
+			notification = 'Wild Berry Dreams'
+		},
+		server = {
+			export = 'rcore_drunk.wild_berry_dreams',
+		},
+	},
+	['milchshake'] = {
+		label = 'Milchshake',
+		weight = 120,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_smoothie_red`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Milchshake getrunken'
+		}
+	},
+	['ayran'] = {
+		label = 'Ayran',
+		weight = 120,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_smoothie_red`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Ayran getrunken'
+		}
+	},
+	['uludag'] = {
+		label = 'Uludag',
+		weight = 120,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_juice_lemon`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Uludag getrunken'
+		}
+	},
+	['ananassaft'] = {
+		label = 'Ananassaft',
+		weight = 120,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_juice_lemon`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Ananassaft getrunken'
+		}
+	},
+	['cranberrynektar'] = {
+		label = 'Cranberrynektar',
+		weight = 120,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_smoothie_red`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Cranberrynektar getrunken'
+		}
+	},
+	['orangensaft'] = {
+		label = 'Orangensaft',
+		weight = 120,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_juice_lemon`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Orangensaft getrunken'
+		}
+	},
+	['cay'] = {
+		label = 'Cay',
+		weight = 120,
+		client = {
+			status = { thirst = 250000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_juice_lemon`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Cay getrunken'
+		}
+	},
+	['eistee_birne'] = {
+		label = 'Eistee Birne',
+		weight = 420,
+		client = {
+			status = { thirst = 280000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_juice_lemon`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Eistee Birne getrunken'
+		}
+	},
+	['eistee_himbeere'] = {
+		label = 'Eistee Himbeere',
+		weight = 420,
+		client = {
+			status = { thirst = 280000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_juice_lemon`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Eistee Himbeere getrunken'
+		}
+	},
+	['eistee_erdbeere'] = {
+		label = 'Eistee Erdbeere',
+		weight = 420,
+		client = {
+			status = { thirst = 280000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_juice_lemon`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Eistee Erdbeere getrunken'
+		}
+	},
+	['eistee_cassis'] = {
+		label = 'Eistee Cassis',
+		weight = 420,
+		client = {
+			status = { thirst = 280000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `brum_juice_lemon`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			usetime = 2500,
+			notification = 'Du hast 1x Eistee Cassis getrunken'
+		}
+	},
+	['williams_tonic'] = {
+		label = 'Williams Tonic',
+		weight = 420,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 280000 },
+			notification = 'Du hast 1x Williams Tonic getrunken'
+		},
+		server = {
+			export = 'rcore_drunk.williams_tonic',
+		},
+	},
+	['bier'] = {
+		label = 'Bier',
+		weight = 420,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 210000 },
+			notification = 'Du hast 1x Bier getrunken'
+		},
+		server = {
+			export = 'rcore_drunk.bier',
+		},
+	},
+	['jackdanielsshot'] = {
+		label = 'Bier',
+		weight = 420,
+		close = true,
+		consume = 0,
+		client = {
+			status = { thirst = 110000 },
+			notification = 'Du hast 1x Jack Daniels Shot getrunken'
+		},
+		server = {
+			export = 'rcore_drunk.jackdanielsshot',
+		},
+	},
+	
+
+
+
+
+	
+	
+
+
+	['parachute'] = {
+		label = 'Fallschirm',
+		weight = 2500,
+		stack = false,
+		client = {
+			anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
+			usetime = 1500
+		}
+	},
+
+	['garbage'] = {
+		label = 'Garbage',
+	},
+
+	['paperbag'] = {
+		label = 'Papiertüte',
+		weight = 25,
+		stack = false,
+		close = false,
+		consume = 0
+	},
+	['breath_alcohol_tester'] = {
+		label = 'Alkohol tester',
+		weight = 250,
+		close = true,
+		client = {},
+		consume = 0,
+		server = {
+			export = 'rcore_drunk.breath_alcohol_tester',
+		},
+	},
+	["backpack"] = {
+		label = "Rucksack",
+		weight = 500,
+		stack = false,
+		close = false,
+		consume = 0
+	},
+
+	['identification'] = {
+		label = 'Identification',
+		client = {
+			image = 'card_id.png'
+		}
+	},
+
+	['panties'] = {
+		label = 'Knickers',
+		weight = 10,
+		consume = 0,
+		client = {
+			status = { thirst = -100000, stress = -25000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_cs_panties_02`, pos = vec3(0.03, 0.0, 0.02), rot = vec3(0.0, -13.5, -1.5) },
+			usetime = 2500,
+		}
+	},
+
+	['lockpick'] = {
+		label = 'Auto Dietrich',
+		weight = 10,
+	},
+	['door_lockpick'] = {
+		label = 'Tür Dietrich',
+		weight = 10,
+	},
+	['phone'] = {
+		label = 'Phone',
+		weight = 190,
+		stack = true,
+		consume = 0,
+		client = {
+			add = function(total)
+				if total > 0 then
+					pcall(function() return exports.npwd:setPhoneDisabled(false) end)
+				end
+			end,
+
+			remove = function(total)
+				if total < 1 then
+					pcall(function() return exports.npwd:setPhoneDisabled(true) end)
+				end
+			end
+		}
+	},
+
+	['money'] = {
+		label = 'Bargeld',
+	},
+
+	['mustard'] = {
+		label = 'Senf',
+		weight = 300,
+		client = {
+			status = { hunger = 25000, thirst = 25000 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			prop = { model = `prop_food_mustard`, pos = vec3(0.01, 0.0, -0.07), rot = vec3(1.0, 1.0, -1.5) },
+			usetime = 2500,
+			notification = 'Du hast Senf getrunken..'
+		}
+	},
+
+
+
+	['kevlar'] = {
+		label = 'Schwere Weste',
+		weight = 1500,
+		stack = true,
+		client = {
+			anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
+			usetime = 3500,
+			event = 'fc_core:useKevlar',
+		}
+	},
+	['kevlar_m'] = {
+		label = 'Mittlere Weste',
+		weight = 1000,
+		stack = true,
+		client = {
+			anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
+			usetime = 3500,
+			event = 'fc_core:useKevlarmit',
+		}
+	},
+	['kevlar_s'] = {
+		label = 'Leichte Weste',
+		weight = 500,
+		stack = true,
+		client = {
+			anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
+			usetime = 3500,
+			event = 'fc_core:useKevlarleicht',
+		}
+	},
+	['kevlar_p'] = {
+		label = 'LSPD Weste',
+		weight = 500,
+		stack = true,
+		client = {
+			anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
+			usetime = 3500,
+			event = 'fc_core:useKevlarPD',
+		}
+	},
+	["rabattcoupon_fox"] = {
+		label = "W&F Rabattcoupon",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "Rabattcoupon für Restaurant William & Fox"
+	},
+	["alcotester"] = {
+		label = "Alkoholtester",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"Einmal pusten bitte\""
+	},
+	["plastik"] = {
+		label = "Plastik",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"Wofür man das wohl braucht?\""
+	},
+
+	["ambulance_mdt"] = {
+		label = "Mediziner Tablet",
+		weight = 300,
+		stack = false,
+		close = true,
+		description = "\"Wird von Medizinern benötigt um ihrer Arbeit nachzugehen\""
+	},
+
+	["ammo_Langwaffe"] = {
+		label = "Langwaffen Munition",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["ammo_pistol"] = {
+		label = "Pistolen Munition",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+
+
+	["arm_wrap"] = {
+		label = "Arm Binde",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["attachment_remover"] = {
+		label = "Attachement Remover",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+
+	["banana"] = {
+		label = "Bananenboot",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["banana_kush_weed"] = {
+		label = "Banana Kush Weed 1G",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["bed1"] = {
+		label = "Wassermatratze 1",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["bed2"] = {
+		label = "Wassermatratze 2",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["bed3"] = {
+		label = "Wassermatratze 3",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["bed4"] = {
+		label = "Wassermatratze 4",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["black_phone"] = {
+		label = "Schwarzes Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["blue_phone"] = {
+		label = "Blaues Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["blumen"] = {
+		label = "Blumen",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["body_bandage"] = {
+		label = "KÃ¶rper Bandage",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["bong"] = {
+		label = "Bong",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["bread"] = {
+		label = "Brot",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["burncream"] = {
+		label = "Brandsalbe",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["cannabis"] = {
+		label = "Cannabis",
+		weight = 5,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["car_gutschein"] = {
+		label = "Autohaus Gutschein 10.000$",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["casino_beer"] = {
+		label = "Casino Beer",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["casino_chips"] = {
+		label = "Casino Chips",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["casino_coffee"] = {
+		label = "Casino Coffee",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["casino_coke"] = {
+		label = "Casino Kofola",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["casino_donut"] = {
+		label = "Casino Donut",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["casino_ego_chaser"] = {
+		label = "Casino Ego Chaser",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["casino_luckypotion"] = {
+		label = "Casino Lucky Potion",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["casino_psqs"] = {
+		label = "Casino Ps & Qs",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["casino_sandwitch"] = {
+		label = "Casino Sandwitch",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["casino_sprite"] = {
+		label = "Casino Sprite",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["circle"] = {
+		label = "Wassersessel",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["classic_phone"] = {
+		label = "Classic Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["clip_extended"] = {
+		label = "Erweitetes Magazin",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"Selbsterklärend\""
+	},
+
+	["cocain"] = {
+		label = "Kokain",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["coca_leaf"] = {
+		label = "Kokainblätter",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["colombiangold_leaf"] = {
+		label = "Kolumbianisches Blattgold",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["colombiangold_seed"] = {
+		label = "Kolumbianischer Goldsamen",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["colombiangold_trimmed_bud"] = {
+		label = "Colombian Gold Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["colombiangold_untrimmed_bud"] = {
+		label = "Colombian Gold Un-Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["components"] = {
+		label = "Komponenten",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["component_extendedclip"] = {
+		label = "Waffen Magazin",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["component_flashlight"] = {
+		label = "Waffen Lampe",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["component_grip"] = {
+		label = "Waffen Griff",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["component_luxaryfinish"] = {
+		label = "Waffen Skin",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["component_scope"] = {
+		label = "Waffen Visier",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["component_suppressor"] = {
+		label = "Waffen SchalldÃ¤mpfer",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["contract"] = {
+		label = "Kaufvertrag",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["crack"] = {
+		label = "Crack",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["crack_pipe"] = {
+		label = "Crack Pipe",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["creatine"] = {
+		label = "Creatine",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["crutch"] = {
+		label = "KrÃ¼cke",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["cubancigar"] = {
+		label = "Cuban Cigar",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["cups"] = {
+		label = "Bierpongbecher",
+		weight = 25,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["davidoffcigar"] = {
+		label = "Davidoff Cigar",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["defib"] = {
+		label = "Defibrillator",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["diamond"] = {
+		label = "Diamant",
+		weight = 75,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["divingsuit"] = {
+		label = "Taucheranzug",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["dosidos_leaf"] = {
+		label = "DosiDos Leaf",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["dosidos_seed"] = {
+		label = "DosiDos Seed",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["dosidos_trimmed_bud"] = {
+		label = "DosiDos Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["dosidos_untrimmed_bud"] = {
+		label = "DosiDos Un-Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["drill"] = {
+		label = "Bohrmaschine",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["drone"] = {
+		label = "Drone",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["drone_lspd"] = {
+		label = "LSPD Drone",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["durchsuchungsbefehl"] = {
+		label = "Durchsuchungsbefehl",
+		weight = 3,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["eisenbarren"] = {
+		label = "Eisenbarren",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["eisenerz"] = {
+		label = "Eisenerz",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["elektromotore"] = {
+		label = "Waffenteile",
+		weight = 25,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fasern"] = {
+		label = "Fasern",
+		weight = 25,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fishing_bait"] = {
+		label = "Köder",
+		weight = 3,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fishing_rod"] = {
+		label = "Angel",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+
+	["fish_bass"] = {
+		label = "Barsch",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fish_bluefish"] = {
+		label = "Blaufisch",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fish_cod"] = {
+		label = "Kabeljau",
+		weight = 60,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fish_dolphin"] = {
+		label = "Baby Delfin",
+		weight = 60,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fish_flounder"] = {
+		label = "Flunder",
+		weight = 60,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fish_mackerel"] = {
+		label = "Makrele",
+		weight = 60,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fish_shark"] = {
+		label = "Baby Hai",
+		weight = 1200,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fish_small"] = {
+		label = "Kleiner Fisch",
+		weight = 300,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fish_whale"] = {
+		label = "Baby Wal",
+		weight = 3000,
+		stack = true,
+		close = true,
+		description = "\"Wow!\""
+	},
+
+	["fitnesscard"] = {
+		label = "Fitnesscard",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["flashlight"] = {
+		label = "Flashlight",
+		weight = 250,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+	["gamepad"] = {
+		label = "Gamepad",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["gas_mask"] = {
+		label = "Gasmaske",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+	["schwarzpulver"] = {
+		label = "Schwarzpulver",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Schwarzpulver verwendet\""
+	},
+
+	["gelato41_leaf"] = {
+		label = "Gelato 41 Leaf",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["gelato41_seed"] = {
+		label = "Gelato 41 Seed",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["gelato41_trimmed_bud"] = {
+		label = "Gelato 41 Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["gelato41_untrimmed_bud"] = {
+		label = "Gelato 41 Un-Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["gemaelde"] = {
+		label = "GemÃƒÂ¤lde",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["glassbohrer"] = {
+		label = "Glasbohrer",
+		weight = 250,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["glass_costa_del_perro"] = {
+		label = "Glass Costa Del Perro",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["glass_rockford_hill"] = {
+		label = "Glass Rockford Hill Reserve",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["glass_vinewood_blanc"] = {
+		label = "Glass Vinewood Sauvignon Blanc",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["glass_vinewood_red"] = {
+		label = "Glass  Vinewood Red Zinfadel",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["gold"] = {
+		label = "Gold",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["golden_pocket_watch"] = {
+		label = "Goldene Taschenuhr",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+	["taschentuch"] = {
+		label = "Taschentuch",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+	["gold_coin"] = {
+		label = "Goldbarren",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["gold_phone"] = {
+		label = "Gold Phone",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["greenlight_phone"] = {
+		label = "Green Light Phone",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["green_phone"] = {
+		label = "Green Phone",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["grip"] = {
+		label = "Griff",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["handcuffs"] = {
+		label = "Handschellen",
+		weight = 25,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["head_bandage"] = {
+		label = "Kopfverband",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["hiqualitysoil"] = {
+		label = "Erde (HQ)",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["hiqualnutrients"] = {
+		label = "Growing Nutrients (HQ)",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["hundeessen"] = {
+		label = "Hundenapf",
+		weight = 125,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["hundetrinken"] = {
+		label = "Trinknapf",
+		weight = 125,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["icepack"] = {
+		label = "KÃ¼hlkissen",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["inflatable"] = {
+		label = "Inflatable",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["joint"] = {
+		label = "Joint",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"Smoke weed everyday..\""
+	},
+
+	["kartoffel"] = {
+		label = "Kartoffel",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["kevlar_teile"] = {
+		label = "Kevlar",
+		weight = 75,
+		stack = true,
+		close = true,
+		description = "\"Wird benötigt um Westen herzustellen\""
+	},
+
+	["kq_easteregg"] = {
+		label = "Easter egg",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["kupfer"] = {
+		label = "Kupfer",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "\"Kupfer kann auf dem Schrottplatz verkauft werden\""
+	},
+
+	["laundrycard"] = {
+		label = "Waschkarte",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"Wird benötigt um Wäsche zu waschen\""
+	},
+
+	["leg_plaster"] = {
+		label = "Beinpflaster",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["lemonskunk_leaf"] = {
+		label = "Lemon Skunk Leaf",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["lemonskunk_seed"] = {
+		label = "Lemon Skunk Seed",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["lemonskunk_trimmed_bud"] = {
+		label = "Lemon Skunk Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["lemonskunk_untrimmed_bud"] = {
+		label = "Lemon Skunk Un-Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["leuhaim_casino_token"] = {
+		label = "Casinochips",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["lighter"] = {
+		label = "Feuerzeug",
+		weight = 30,
+		stack = true,
+		close = true,
+		description = "\"Wird benötigt um zu rauchen\""
+	},
+
+	["liquid"] = {
+		label = "Liquid",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"Wird benötigt um eine Vape zu rauchen\""
+	},
+
+	["lowqualitysoil"] = {
+		label = "Erde (LQ)",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["lowqualnutrients"] = {
+		label = "Growing Nutrients (LQ)",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["luxary_finish"] = {
+		label = "Luxury Finish",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["Magazin"] = {
+		label = "Magazin",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["magicmushroom"] = {
+		label = "Pilz",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["marlboro"] = {
+		label = "Marlboro Pack",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "\"Rauchen ist tödlich\""
+	},
+
+	["marlborocig"] = {
+		label = "Marlboro Zigarette",
+		weight = 5,
+		stack = true,
+		close = true,
+		description = "\"Rauchen ist tödlich\""
+	},
+
+	["medbag"] = {
+		label = "Medictasche",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["medikit"] = {
+		label = "Medkit",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["medqualnutrients"] = {
+		label = "Growing Nutrients (MQ)",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["megaburger"] = {
+		label = "Megaburger",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["meth"] = {
+		label = "Meth",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"Vorsicht! Willst du es wirklich riskieren?\""
+	},
+
+	["mgclip"] = {
+		label = "MG Clip",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["mohnharz"] = {
+		label = "Mohnharz",
+		weight = 5,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Meth benötigt\""
+	},
+
+	["neonremote"] = {
+		label = "Neons Remote",
+		weight = 250,
+		stack = true,
+		close = true,
+		description = "\"Wird verwendet um die Neons am Fahrzeug anzupassen\""
+	},
+
+	["northernlights_leaf"] = {
+		label = "Northern Lights Leaf",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["northernlights_seed"] = {
+		label = "Northern Lights Seed",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["northernlights_trimmed_bud"] = {
+		label = "Northern Lights Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["northernlights_untrimmed_bud"] = {
+		label = "Northern Lights Un-Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["ogkush_leaf"] = {
+		label = "OG Kush Leaf",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["ogkush_seed"] = {
+		label = "OG Kush Seed",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["ogkush_trimmed_bud"] = {
+		label = "OG Kush Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["ogkush_untrimmed_bud"] = {
+		label = "OG Kush Un-Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["oil"] = {
+		label = "Öl",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"Kann auf dem Schrottplatz verkauft werden\""
+	},
+
+	["parasailing"] = {
+		label = "Paraseiling Fallschirm",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["pfandflaschen"] = {
+		label = "Pfandflasche",
+		weight = 35,
+		stack = true,
+		close = true,
+		description = "\"Eine leere Flasche\""
+	},
+
+	["phone_module"] = {
+		label = "Handy Module",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["pinacolada"] = {
+		label = "Pina Colada",
+		weight = 300,
+		stack = true,
+		close = true,
+		description = "\"Alkoholhaltiges Getränk\""
+	},
+
+	["pink_phone"] = {
+		label = "pinkes Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["pistolbox"] = {
+		label = "Pistolenmunition",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["pistolclip"] = {
+		label = "Pistol Clip",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["pistol_ammo"] = {
+		label = "Pistolen Munition",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["plantpot"] = {
+		label = "Plant Pot",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	['police_mdt'] = {
+		     label = 'Mobile Data Terminal',
+		     weight = 500,
+		     stack = false,
+		     close = true,
+		     allowArmed = false,
+		     consume = 0,
+		     server = { export = 'redutzu-mdt.useItem' },
+		     description = 'Take roleplay to another level with the most advanced MDT on FiveM'
+		},
+
+	["powerbank"] = {
+		label = "Power Bank",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["preworkout"] = {
+		label = "Pre-Workout",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["private_tracker"] = {
+		label = "Privater Tracker",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["protein"] = {
+		label = "Protein",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["protein_shake"] = {
+		label = "Protein Shake",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["pureafghani_leaf"] = {
+		label = "Reines afghanisches Blatt",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["pureafghani_seed"] = {
+		label = "Reiner afghanischer Samen",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["pureafghani_trimmed_bud"] = {
+		label = "Pure Afghani Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["pureafghani_untrimmed_bud"] = {
+		label = "Pure Afghani Un-Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["purple_haze_blunt"] = {
+		label = "Purple Haze Blunt",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["rainbowbelts_leaf"] = {
+		label = "Rainbow Belts Leaf",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["rainbowbelts_seed"] = {
+		label = "Rainbow Belts Seed",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["rainbowbelts_trimmed_bud"] = {
+		label = "Rainbow Belts Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["rainbowbelts_untrimmed_bud"] = {
+		label = "Rainbow Belts Un-Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["red_phone"] = {
+		label = "Red Phone",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["repairkit"] = {
+		label = "Reperaturkasten",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Reparieren von Fahrzeugen benötigt\""
+	},
+
+	["riflebox"] = {
+		label = "Langwaffenmunition",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["rifleclip"] = {
+		label = "Rifle Clip",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+	["rope"] = {
+		label = "Kabelbinder",
+		weight = 150,
+		stack = true,
+		close = true,
+		description = "\"Kabelbinder zum Fesseln\""
+	},
+	["rope_car"] = {
+		label = "Seilzug",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "\"..um Fahrzeuge aus dem Dreck zu ziehen\""
+	},
+
+	["scissors"] = {
+		label = "Schere",
+		weight = 190,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Lösen von Seilen benötigt\""
+	},
+
+	["scope"] = {
+		label = "Scope",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["scratchcard"] = {
+		label = "Rubbellos",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["seashark"] = {
+		label = "Seashark",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["sea_boot"] = {
+		label = "Alter Schuh",
+		weight = 125,
+		stack = true,
+		close = true,
+		description = "\"Kann beim Fischankäufer abgegeben werden\""
+	},
+
+	["sea_tin"] = {
+		label = "Dose",
+		weight = 85,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["sedative"] = {
+		label = "Beruhigungsmittel",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["sharkrepelent"] = {
+		label = "Anti Haispray",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["shotgunclip"] = {
+		label = "Shotgun Clip",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["silber"] = {
+		label = "Silber",
+		weight = 25,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Schmelzen von Silberbarren benötigt\""
+	},
+
+	["silberbarren"] = {
+		label = "Silberbarren",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "\"Kann beim Juwelier verkauft werden\""
+	},
+
+	["ski"] = {
+		label = "Skier",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["skunk1_leaf"] = {
+		label = "Skunk 1 Blatt",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["skunk1_seed"] = {
+		label = "Skunk 1 Samen",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["skunk1_trimmed_bud"] = {
+		label = "Skunk 1 Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["skunk1_untrimmed_bud"] = {
+		label = "Skunk 1 Un-Trimmed Bud",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["smgclip"] = {
+		label = "SMG Clip",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["sniperclip"] = {
+		label = "Sniper Clip",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["sonar"] = {
+		label = "Sonar",
+		weight = 350,
+		stack = true,
+		close = true,
+		description = "\"Wird zum pingen von Schatztruhen benötigt\""
+	},
+
+	['spray'] = {
+		label = 'Spray',
+		weight = 250,
+		close = true,
+		consume = 0,
+		client = {},
+		server = {
+			export = 'rcore_spray.spray',
+		},
+	},
+	['spray_remover'] = {
+		label = 'Spray Remover',
+		weight = 250,
+		close = true,
+		consume = 0,
+		client = {},
+		server = {
+			export = 'rcore_spray.spray_remover',
+		},
+	},
+	["steine"] = {
+		label = "Steine",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["stretcher"] = {
+		label = "Zusammenklappbare Trage",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["suppressor"] = {
+		label = "Schalldämpfer",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["suturekit"] = {
+		label = "Suture Kit",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+
+	["testosterone"] = {
+		label = "Testosterone",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["thermit"] = {
+		label = "Thermit",
+		weight = 750,
+		stack = true,
+		close = true,
+		description = "\"Hochexplosiv\""
+	},
+
+	["throwableclip"] = {
+		label = "Throwable Clip",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tint_army"] = {
+		label = "Army",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tint_gold"] = {
+		label = "Gold",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tint_green"] = {
+		label = "Green",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tint_lspd"] = {
+		label = "LSPD",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tint_orange"] = {
+		label = "Orange",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tint_pink"] = {
+		label = "Pink",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tint_platinum"] = {
+		label = "Platinum",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["treasure_box"] = {
+		label = "Schatztruhe",
+		weight = 1250,
+		stack = true,
+		close = true,
+		description = "\"Hinstellen, auftreten, absahnen!\""
+	},
+
+	["tuna"] = {
+		label = "Thunfisch",
+		weight = 379,
+		stack = true,
+		close = true,
+		description = "\"Kann beim Fischankäufer verkauft werden\""
+	},
+
+	["tuningchip"] = {
+		label = "Tuning Chip",
+		weight = 250,
+		stack = true,
+		close = true,
+		description = "\"Benutzung auf eigene Gefahr!\""
+	},
+
+	["tuning_gutschein"] = {
+		label = "Tuning Gutschein 10.000$",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"Ein Tuning Gutschein\""
+	},
+
+	["tweezers"] = {
+		label = "Pinzette",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["uvlight"] = {
+		label = "UV Tashenlampe",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["van_lockpick"] = {
+		label = "Van Lockpick",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["vape"] = {
+		label = "Vape",
+		weight = 150,
+		stack = true,
+		close = true,
+		description = "\"Mit Liquid füllen und rauchen\""
+	},
+
+	["vehiclekeys"] = {
+		label = "Schlüsselbund",
+		weight = 0,
+		stack = true,
+		close = true,
+		description = "\"Hier kannst du all deine Fahrzeuge einsehen\""
+	},
+
+	["wateringcan"] = {
+		label = "Gießkanne",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["waterpass"] = {
+		label = "Water Pass",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["waterpassunlimited"] = {
+		label = "Water Pass Unlimited",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["weabox"] = {
+		label = "Weapon Box",
+		weight = 2,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["weaclip"] = {
+		label = "Weapon Clip",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["Weaponluxary"] = {
+		label = "Luxus Skin",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["WeaponTint"] = {
+		label = "Waffenskins",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["weed_grow_fan1"] = {
+		label = "Grow Fan",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["weed_grow_light1"] = {
+		label = "Grow Light",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wet_black_phone"] = {
+		label = "Nasses schwarzes Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wet_blue_phone"] = {
+		label = "Nasses blaues Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wet_classic_phone"] = {
+		label = "Nasses Klassisches Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wet_gold_phone"] = {
+		label = "Nasses Goldnes Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wet_greenlight_phone"] = {
+		label = "Nasses hellgrÃ¼nes Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wet_green_phone"] = {
+		label = "Nasses grÃ¼nes Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wet_pink_phone"] = {
+		label = "Nasses pinkes Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wet_red_phone"] = {
+		label = "Nasses rotes Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wet_white_phone"] = {
+		label = "Nasses weisses Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wheelchair"] = {
+		label = "Rollstuhl",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["white_phone"] = {
+		label = "Weisses Handy",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["zentorno"] = {
+		label = "Zentorno",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["acapulcogold_leaf"] = {
+		label = "Acapulco-Blattgold",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["acapulcogold_seed"] = {
+		label = "Acapulco-Goldsamen",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["acapulcogold_trimmed_bud"] = {
+		label = "Acapulco Goldbeschnittene Knospe",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["acapulcogold_untrimmed_bud"] = {
+		label = "Acapulco Gold, ungetrimmte Knospe",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["advent"] = {
+		label = "Adventskalender",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["absolut_vodka"] = {
+		label = "Absolut Vodka",
+		weight = 700,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["traubensaft"] = {
+		label = "Traubensaft",
+		weight = 250,
+		stack = true,
+		close = true,
+		description = "\"Kann verkauft werden\""
+	},
+
+	["pepperoni"] = {
+		label = "Pepperoni",
+		weight = 30,
+		stack = true,
+		close = true,
+		description = "\"Vorsicht: scharf!\""
+	},
+
+	["fanta"] = {
+		label = "Fanta",
+		weight = 333,
+		stack = true,
+		close = true,
+		description = "\"Mhm.. Lecker\""
+	},
+
+	["pizzateig"] = {
+		label = "Pizzateig",
+		weight = 250,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Pizzen benötigt\""
+	},
+
+	["pommes_roh"] = {
+		label = "Rohe Pommes",
+		weight = 350,
+		stack = true,
+		close = true,
+		description = "\"Mit ein wenig Fritieröl sind die bestimmt super!\""
+	},
+
+	["basilikum"] = {
+		label = "Basilikum",
+		weight = 25,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["beach"] = {
+		label = "Sex on the Beach",
+		weight = 400,
+		stack = true,
+		close = true,
+		description = "\"Alkoholhaltiges Getränk\""
+	},
+
+	["weintrauberot"] = {
+		label = "Weintraube Rot",
+		weight = 30,
+		stack = true,
+		close = true,
+		description = "\"Kann verkauft werden oder zu Traubensaft verarbeitet werden\""
+	},
+
+	["weintraubeweiss"] = {
+		label = "Weintraube Weiß",
+		weight = 30,
+		stack = true,
+		close = true,
+		description = "\"Kann verkauft werden oder zu Traubensaft verarbeitet werden\""
+	},
+
+
+	["raw_chicken"] = {
+		label = "Rohes Hähnchenfleisch",
+		weight = 250,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["blaupause_langwaffe"] = {
+		label = "Blaupause Langwaffe",
+		weight = 75,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen eine Langwaffe benötigt\""
+	},
+
+	["blaupause_pistole"] = {
+		label = "Blaupause Pistole",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von einer Pistole benötigt\""
+	},
+
+	["blei"] = {
+		label = "Blei",
+		weight = 40,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Munition benötigt\""
+	},
+
+	["blue_fashioned"] = {
+		label = "Blue Fashioned",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["blue_lagoon"] = {
+		label = "Blue Lagoon",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["zigarre"] = {
+		label = "Zigarre",
+		weight = 20,
+		stack = true,
+		close = true,
+		description = "\"Mach dir ne Packung fertig und verkauf sie\""
+	},
+
+	["zigarrenpckg"] = {
+		label = "Zigarrenpackung",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "\"Kann beim Tabakwarenhändler verkauft werden\""
+	},
+
+	["bubblewaffe"] = {
+		label = "Bubbel waffel",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["rustikaler_burger"] = {
+		label = "Rustikaler Burger",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["hookah"] = {
+		label = "Shisha",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["burger_buns"] = {
+		label = "Burger Buns",
+		weight = 35,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Burgern benötigt\""
+	},
+
+	["buttermilk"] = {
+		label = "Buttermilch",
+		weight = 400,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["schokoriegel"] = {
+		label = "Schokoriegel",
+		weight = 75,
+		stack = true,
+		close = true,
+		client = {
+			status = { hunger = 250000 },
+			anim = 'eating',
+			prop = 'brum_single_philly',
+			usetime = 2500,
+			notification = 'Schokolade macht nicht dick, sie formt nur.'
+		},
+		description = "\"Mhm.. Lecker\""
+	},
+
+	["ice_tea"] = {
+		label = "Ice Tea",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["jackdanielsshot"] = {
+		label = "Jack Daniel's Shot",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["jack_daniel"] = {
+		label = "Jack Daniel's",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["jaegermeister"] = {
+		label = "Jägermeister",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["kaese_makkaroni"] = {
+		label = "Käse Makkaroni",
+		weight = 400,
+		stack = true,
+		close = true,
+		description = "\"Mhm.. Lecker\""
+	},
+
+	["kq_tow_rope"] = {
+		label = "Abschleppseil",
+		weight = 650,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Abschleppen von Fahrzeugen benötigt\""
+	},
+
+	["chicken_popcorn"] = {
+		label = "Chicken Popcorn",
+		weight = 400,
+		stack = true,
+		close = true,
+		description = "\"Mhm.. Lecker\""
+	},
+
+
+
+	["club77vip"] = {
+		label = "Club77 VIP",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["slushi"] = {
+		label = "Slushi",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["cola_zero"] = {
+		label = "Cola Zero",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["spareribs_roh"] = {
+		label = "Spareribs Roh",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["speck"] = {
+		label = "Speck",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["zigarettenpckg"] = {
+		label = "Zigarettenpackung",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "\"Kann beim Tabakwarenhändler verkauft werden\""
+	},
+
+	["zigarette"] = {
+		label = "Zigarette",
+		weight = 20,
+		stack = true,
+		close = true,
+		description = "\"Rauchen ist tödlich\""
+	},
+
+	["stahlrohr"] = {
+		label = "Stahlrohr",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tomate"] = {
+		label = "Tomate",
+		weight = 15,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["plasitikbeutel"] = {
+		label = "Plastikbeutel",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["toastbrot"] = {
+		label = "Toastbrot",
+		weight = 25,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["mehl"] = {
+		label = "Mehl",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["milch"] = {
+		label = "Milch",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["tabak"] = {
+		label = "Tabak",
+		weight = 75,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Zigaretten oder Eintauschen gegen Gold benötigt\""
+	},
+
+	["tabaksamen"] = {
+		label = "Tabaksamen",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"Tabaksamen um Tabak anzupflanzen\""
+	},
+
+	["creps"] = {
+		label = "Crepes",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tacos"] = {
+		label = "Tacos",
+		weight = 400,
+		stack = true,
+		close = true,
+		description = "\"Mhm.. Lecker\""
+	},
+
+	["glasflasche"] = {
+		label = "Glasflasche",
+		weight = 110,
+		stack = true,
+		close = true,
+		description = "\"Hmm..\""
+	},
+
+	["tequila_gold"] = {
+		label = "Tequila Gold",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tequila_silber"] = {
+		label = "Tequila Silver",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tequila_sunrise"] = {
+		label = "Tequila Sunrise",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["glasflaschegruen"] = {
+		label = "Grüne Glasflasche",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["salami"] = {
+		label = "Salami",
+		weight = 150,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["schinken"] = {
+		label = "Schinken",
+		weight = 150,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["burgerpetti"] = {
+		label = "Burgerpatty",
+		weight = 80,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Burgern benötigt\""
+	},
+
+	["honey_mustard"] = {
+		label = "Honey Mustard Sauce",
+		weight = 350,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["notfalltablet"] = {
+		label = "Notfall Tablet",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["nothing"] = {
+		label = "Platzverschwender",
+		weight = 20,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["nut_chicken"] = {
+		label = "Nut Chicken",
+		weight = 350,
+		stack = true,
+		close = true,
+		description = "\"Mhm.. Lecker\""
+	},
+
+	["kq_winch"] = {
+		label = "Autowinde",
+		weight = 900,
+		stack = true,
+		close = true,
+		description = "\"An einen festen Gegenstand anschließen, dann ans Auto und ziehen\""
+	},
+
+	["glasscherbe"] = {
+		label = "Glasscherbe",
+		weight = 26,
+		stack = true,
+		close = true,
+		description = "\"Daraus kann man bestimmt was basteln\""
+	},
+
+
+	["ei"] = {
+		label = "Ei",
+		weight = 32,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["tomahawk_raw"] = {
+		label = "Rohes Tomahawk Steak",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["frittierfett"] = {
+		label = "Frittierfett",
+		weight = 750,
+		stack = true,
+		close = true,
+		description = "\"Wird zum Herstellen von Speisen benötigt\""
+	},
+
+	["panicbutton"] = {
+		label = "Panikknopf",
+		weight = 10,
+		stack = true,
+		close = true,
+		allowArmed = true,
+		description = "\"Alarmiere alle Kollegen, wenn Du in Gefahr bist!\""
+	},
+
+	["papier"] = {
+		label = "Papier",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fish_lachs"] = {
+		label = "Lachs",
+		weight = 400,
+		stack = true,
+		close = true,
+		description = "\"Kann beim Fischankäufer verkauft werden\""
+	},
+
+['chip_gun'] = {
+    name = 'chip_gun',
+    label = 'Chip-Pistole',
+    weight = 1000,
+    stack = false,
+    close = true,
+    description = 'Verwendet, um Mikrochips in Hunde zu implantieren oder zu aktualisieren.',
+    type = 'item_standard',
+    usable = true,
+    unique = true,
+    onUse = function(source)
+        TriggerClientEvent('chip:openGUI', source)  -- Öffnen des GUI auf Client-Seite
+        return true
+    end
+},
+
+
+	["chip_reader"] = {
+		label = "Hundechipleser",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["dog_chip"] = {
+		label = "Hundechip",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["weapon_pistol"] = {
+		label = "Pistole",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["weapon_pistol_mk2"] = {
+		label = "Pistole MK2",
+		weight = 3,
+		stack = true,
+		close = true,
+		description = "\"Pistole MK2\""
+	},
+
+	["weapon_snspistol"] = {
+		label = "SNS Pistole",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["hack"] = {
+		label = "Hack",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["mascapone"] = {
+		label = "Mascapone",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["nudelteig"] = {
+		label = "Nudelteig",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["kaese"] = {
+		label = "Käse",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["biscuit"] = {
+		label = "Biscuit",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["ballotista_meal"] = {
+		label = "Ballotista Meal",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["ballotista_pizza"] = {
+		label = "Ballotista Pizza",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["Billiarpokal12"] = {
+		label = "Gold Medaille",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["Billiarpokal2"] = {
+		label = "Silber Medaille",
+		weight = 12,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["Billiarpokal3"] = {
+		label = "Bronze Medaille",
+		weight = 12,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["neonkit"] = {
+		label = "Neons Kit",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+	["usb_metasploit"] = {
+		label = "Metasploit USB-Stick",
+		weight = 12,
+		stack = true,
+		close = true,
+		description = "\"Einsatz zur Sicherheitsanalyse und Schwachstellenbewertung\""
+	},
+	["usb_wireshark"] = {
+		label = "Wireshark USB-Access Point",
+		weight = 212,
+		stack = true,
+		close = true,
+		description = "\"Netzwerkanalyse- und Monitoring-Tool\""
+	},
+	["usb_hashcat"] = {
+		label = "Hashcat USB-Stick",
+		weight = 12,
+		stack = true,
+		close = true,
+		description = "\"Leistungsfähiger Passwort-Wiederherstellungstool\""
+	},
+	["usb_nmap"] = {
+		label = "Nmap USB-Stick",
+		weight = 15,
+		stack = true,
+		close = true,
+		description = "\"Netzwerk-Scanner zur Erkennung von Geräten und Diensten\""
+	},
+	["usb_burpsuite"] = {
+        label = "Burp Suite USB-Stick",
+        weight = 15,
+		stack = true,
+		close = true,
+		description = "\"Integriertes Framework für das Testen der Sicherheit von Webanwendungen\""
+    },
+	["usb_autopsy"] = {
+		label = "Autopsy USB-Stick",
+		weight = 15,
+		stack = true,
+		close = true,
+		description = "\"Digitale Forensik-Plattform zur Untersuchung von Datenträgern\""
+	},
+	["tresorschluessel"] = {
+		label = "Tresorschlüssel",
+		weight = 22,
+		stack = true,
+		close = true,
+		description = "\"Tresorschlüssel für eini\""
+	},
+		-- MEDICSYSTEM --
+		["schmerztablette"] = {
+			label = "Schmerztablette",
+			weight = 25,
+			stack = true,
+			close = true,
+			description = "\"Wird zum Behandeln von Schmerzen benötigt\""
+		},
+	
+		["erstehilfeset"] = {
+			label = "Erste Hilfe Set",
+			weight = 100,
+			stack = true,
+			close = true,
+			description = "\"Wird zum Behandeln von Schmerzen benötigt\""
+		},
+	
+		["opkit_klein"] = {
+			label = "OP-Kit (klein)",
+			weight = 100,
+			stack = true,
+			close = true,
+			description = "\"Wird zum Behandeln von Schmerzen benötigt\""
+		},
+		
+		["opkit_gross"] = {
+			label = "OP-Kit (groß)",
+			weight = 100,
+			stack = true,
+			close = true,
+			description = "\"Wird zum Behandeln von Schmerzen benötigt\""
+		},
+	
+	
+		["tablette"] = {
+			label = "Kopfschmerztablette",
+			weight = 10,
+			stack = true,
+			close = true,
+			description = "\"An item\""
+		},
+
+	["weldingmachine"] = {
+		label = "Weldingmachine",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+	["unicorn_gold"] = {
+		label = "Unicorn VIP Goldcard",
+		weight = 5,
+		stack = true,
+		close = true,
+		description = "\"Das ist die goldene VIP Karte vom Unicorn\""
+	},
+	["unicorn_silber"] = {
+		label = "Unicorn VIP Silbercard",
+		weight = 5,
+		stack = true,
+		close = true,
+		description = "\"Das ist die silberne VIP Karte vom Unicorn\""
+	},
+	["unicorn_platin"] = {
+		label = "Unicorn VIP Platincard",
+		weight = 5,
+		stack = true,
+		close = true,
+		description = "\"Das ist die Platin VIP-Card vom Unicorn\""
+	},
+
+	["unicorn_vip"] = {
+		label = "Unicorn VIP Karte",
+		weight = 5,
+		stack = true,
+		close = true,
+		description = "\"Das ist die VIP-Card vom Unicorn\""
+	},
+
+	["uncorn_gold"] = {
+		label = "Unicorn Goldkarte",
+		weight = 5,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["Billiarpokal1"] = {
+		label = "Gold Medaille",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["eis"] = {
+		label = "Eis",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["holz"] = {
+		label = "Holz",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["vintage_teile"] = {
+		label = "Vintage Teile",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["griff"] = {
+		label = "Griff",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["lauf"] = {
+		label = "Lauf",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["eisen"] = {
+		label = "eisen",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["blaupause_ak"] = {
+		label = "Blaupause AKS-74U",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["WEAPON_AKS74U"] = {
+		label = "AKS-74U",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["dressing"] = {
+		label = "Dressing",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["fertilizer"] = {
+		label = "Dünger",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["tuning_component"] = {
+		label = "Tuning component",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["coca_seed"] = {
+		label = "Kokain",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["kq_angle_grinder"] = {
+		label = "Angle grinder",
+		weight = 3,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["weed_lemonhaze_seed"] = {
+		label = "Lemon Haze",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["weed_lemonhaze"] = {
+		label = "Lemonhaze ",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["getreide"] = {
+		label = "Getreide",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wassereimer"] = {
+		label = "Wassereimer",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["ram"] = {
+		label = "Ramme",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["scratch_ticket"] = {
+		label = "Scratching Ticket",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "Rubbeln und Gewinnen"
+	},
+		server = { TriggerEvent("dr-scratching:handler"),
+	},
+
+	["eiswuerfel"] = {
+		label = "Eiswürfel",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["pfirsichlikoer"] = {
+		label = "Pfirsichlikör",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["heidelbeeren"] = {
+		label = "Heidelbeeren",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["himbeeren"] = {
+		label = "Himbeeren",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["kokosnusscreme"] = {
+		label = "Kokosnusscreme",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["wild_berry"] = {
+		label = "Wild_Berry",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["aluminium"] = {
+		label = "Aluminium",
+		weight = 2,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["bauxit"] = {
+		label = "Bauxit",
+		weight = 3,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+
+	["Cranberrynektar"] = {
+		label = "Cranberrynektar",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["sex_on_the_beach"] = {
+		label = "Sex_on_the_Beach",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+}
