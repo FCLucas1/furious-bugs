@@ -5009,4 +5009,12 @@ return {
 		close = true,
 		description = "\"An item\""
 	},
+
+	["cigar"] = {
+		label = "Zigarette",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
 }
