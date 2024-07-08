@@ -1,0 +1,491 @@
+---------------------------------------------------------------------------------------------------------------
+-- If you have any questions or issues, feel free to open a ticket on our Discord.
+-- https://discord.gg/unique
+
+-- "true" = activated, "false" = deactivated. (Applies universally)
+
+-- DO NOT TOUCH THE KEYS BEFORE THE "=" CHARACTER TO PREVENT ERRORS!
+-- YOU CAN ONLY EDIT THE VALUES BEHIND THE "=" CHARACTER UNLESS MENTIONED!
+
+UNIQUE.Questionnaire_1 = {
+    ['min_points_to_pass'] = 5, -- Each correct answer counts as 1 point. (If you have 2 correct answers for a question, one correct answer counts as 0.5 points!)
+    ['Questions'] = {
+        [1] = {
+            ['question'] = "1. Wie viel hast du für dein Flugticket bezahlt?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "512$",
+                },
+                [2] = {
+                    ['answer'] = "412$",
+                },
+                [3] = {
+                    ['answer'] = "612$",
+                },
+                [4] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "712$",
+                },
+                [5] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "812$",
+                },
+            },
+            ['right_answer'] = {3}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [2] = {
+            ['question'] = "2. Wie lautete deine Flugnummer?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "FC-12NE",
+                },
+                [2] = {
+                    ['answer'] = "FC-13NE",
+                },
+                [3] = {
+                    ['answer'] = "FC-12EN",
+                },
+                [4] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "CF-13EN",
+                },
+                [5] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "FC-14OP",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [3] = {
+            ['question'] = "3. Du wirst bewusstlos und in diesem Zustand vom Medic zum Krankenhaus gefahren. Er erzählt dir von seiner Ehe und seinen drei Kindern, an welche Informationen erinnerst du dich, nachdem du reanimiert wurdest?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Der Medic ist in einer Ehe und hat drei Kinder",
+                },
+                [2] = {
+                    ['answer'] = "Der Medic ist vergeben und hat Kinder",
+                },
+                [3] = {
+                    ['answer'] = "Gar nichts",
+                },
+                [4] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Der Medic hat ein langweiliges Leben",
+                },
+                [5] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Keine Ahnung",
+                },
+            },
+            ['right_answer'] = {3}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [4] = {
+            ['question'] = "4. Welcher der Orte ist ein Sicherheitsbereich in unserem Staat?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Meetingpoint / Würfelpark",
+                },
+                [2] = {
+                    ['answer'] = "PD (Police Department)",
+                },
+                [3] = {
+                    ['answer'] = "Keiner",
+                },
+                [4] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Military Base (Fort Zancudo)",
+                },
+                [5] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Flughafen",
+                },
+            },
+            ['right_answer'] = {5}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [5] = {
+            ['question'] = "5. Was darf man bei einem Schussgefecht aufgrund der Verletzungsgefahr auf keinen Fall ausziehen?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Man darf sich nichts ausziehen",
+                },
+                [2] = {
+                    ['answer'] = "Die Weste",
+                },
+                [3] = {
+                    ['answer'] = "Die Schuhe",
+                },
+                [4] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Die Handschuhe",
+                },
+                [5] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Den Helm",
+                },
+            },
+            ['right_answer'] = {3}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [6] = {
+            ['question'] = "6. Wo darf man mit seinem Sportwagen (z.B. Lamorghini Sian) fahren?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Überall, immerhin habe ich dafür mehr als genug Geld bezahlt",
+                },
+                [2] = {
+                    ['answer'] = "Auf Wegen / Straßen, die auf der Karte eingetragen sind",
+                },
+                [3] = {
+                    ['answer'] = "Nur auf Straßen",
+                },
+                [4] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Auf Straßen, Feldwegen, Autobahnen und Grünstreifen",
+                },
+                [5] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Mit Off-Road-Reifen überall",
+                },
+            },
+            ['right_answer'] = {2}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [7] = {
+            ['question'] = "7. Was darf man anderen Spielern alles aus der Tasche / dem Kofferraum oder Handschuhfach abnehmen, wenn man sie überfällt / ausraubt?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Alles, außer Essen und Trinken",
+                },
+                [2] = {
+                    ['answer'] = "Alles was man möchte",
+                },
+                [3] = {
+                    ['answer'] = "Alles, außer Essen, Trinken und Bargeld",
+                },
+                [4] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Alles außer Coin-Gegenständen und Goldartikel (Nuggets / Barren)",
+                },
+                [5] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Alles außer Coin-Gegenständen und Goldartikel (Nuggets / Barren), Essen und Trinken",
+                },
+            },
+            ['right_answer'] = {4}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [8] = {
+            ['question'] = "8. Wann darf ohne verbale Ankündigung auf andere Parteien geschossen werden?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Wenn das Auftreten die Schussabsichten klar zeigt",
+                },
+                [2] = {
+                    ['answer'] = "Solange man niemanden töten will",
+                },
+                [3] = {
+                    ['answer'] = "In Kampfzonen und auf Fraktionsgrundstücken",
+                },
+                [4] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Wenn die Gegenpartei provoziert",
+                },
+                [5] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Auf Fraktionsgründstücken und auf Routen",
+                },
+            },
+            ['right_answer'] = {1, 3}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [9] = {
+            ['enabled'] = true, -- Would you like to activate this question?
+            ['question'] = "9. Eine Gruppe von Freunden möchte gemeinsam als Zivilisten agieren, wie viele Personen dürfen dabei gemeinsam agieren?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "10",
+                },
+                [2] = {
+                    ['answer'] = "5",
+                },
+                [3] = {
+                    ['answer'] = "3",
+                },
+                [4] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "6",
+                },
+                [5] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "15",
+                },
+            },
+            ['right_answer'] = {2}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [10] = {
+            ['enabled'] = true, -- Would you like to activate this question?
+            ['question'] = "10. Wie können bewusstlose Personen im Fahrzeug / Flugobjekt transportiert werden?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Wenn die Sitzplatzkapazitäten nicht überschritten werden",
+                },
+                [2] = {
+                    ['answer'] = "Solange irgendjemand sie Carry nehmen kann",
+                },
+                [3] = {
+                    ['answer'] = "Im Kofferraum",
+                },
+                [4] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Nicht vom Fahrer und Beifahrer",
+                },
+                [5] = {
+                    ['enabled'] = true, -- Would you like to activate this additional response option?
+                    ['answer'] = "Immer auf dem Dach oder der Rückbank",
+                },
+            },
+            ['right_answer'] = {1, 4}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [11] = {
+            ['enabled'] = false, -- Would you like to activate this question?
+            ['question'] = "11. What does Random Deathmatch mean?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [2] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [3] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [4] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [5] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [12] = {
+            ['enabled'] = false, -- Would you like to activate this question?
+            ['question'] = "12. What does Random Deathmatch mean?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [2] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [3] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [4] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [5] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [13] = {
+            ['enabled'] = false, -- Would you like to activate this question?
+            ['question'] = "13. What does Random Deathmatch mean?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [2] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [3] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [4] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [5] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [14] = {
+            ['enabled'] = false, -- Would you like to activate this question?
+            ['question'] = "14. What does Random Deathmatch mean?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [2] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [3] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [4] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [5] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [15] = {
+            ['enabled'] = false, -- Would you like to activate this question?
+            ['question'] = "15. What does Random Deathmatch mean?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [2] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [3] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [4] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [5] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [16] = {
+            ['enabled'] = false, -- Would you like to activate this question?
+            ['question'] = "16. What does Random Deathmatch mean?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [2] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [3] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [4] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [5] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [17] = {
+            ['enabled'] = false, -- Would you like to activate this question?
+            ['question'] = "17. What does Random Deathmatch mean?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [2] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [3] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [4] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [5] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [18] = {
+            ['enabled'] = false, -- Would you like to activate this question?
+            ['question'] = "18. What does Random Deathmatch mean?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [2] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [3] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [4] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [5] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [19] = {
+            ['enabled'] = false, -- Would you like to activate this question?
+            ['question'] = "19. What does Random Deathmatch mean?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [2] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [3] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [4] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [5] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        [20] = {
+            ['enabled'] = false, -- Would you like to activate this question?
+            ['question'] = "20. What does Random Deathmatch mean?",
+            ['Answers'] = { -- All possible answer options.
+                [1] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [2] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [3] = {
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [4] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+                [5] = {
+                    ['enabled'] = false, -- Would you like to activate this additional response option?
+                    ['answer'] = "Random Deathmatch means killing a player without a valid reason.",
+                },
+            },
+            ['right_answer'] = {1}, -- Number of correct answers for this question. "{ANSWER}" or "{ANSWER1, ANSWER2}". Maximum of 2 correct answers possible.
+        },
+        
+    },
+}
+
+-- https://discord.gg/unique
+-- If you have any questions or issues, feel free to open a ticket on our Discord.
+---------------------------------------------------------------------------------------------------------------
