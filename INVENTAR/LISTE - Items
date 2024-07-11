@@ -5017,4 +5017,60 @@ return {
 		close = true,
 		description = "\"An item\""
 	},
+
+	["2cb"] = {
+		label = "2cb",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["chemikalien"] = {
+		label = "Chemikalien",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["mdma"] = {
+		label = "MDMA",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["lsd"] = {
+		label = "LSD",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["amphetamine"] = {
+		label = "Amphetamine",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["stickstoff"] = {
+		label = "Stickstoff",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
+
+	["ecstasy"] = {
+		label = "Ecstasy",
+		weight = 1,
+		stack = true,
+		close = true,
+		description = "\"An item\""
+	},
 }
